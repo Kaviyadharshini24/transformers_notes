@@ -8,7 +8,7 @@ def scaled_dot_product(q, k, v, mask=None):
     scaled = torch.matmul(q, k.transpose(-1, -2)) / math.sqrt(d_k)
 
     if mask is not None:
-        scaled = scaled + mask
+        scaled+ = mask
 
     attention = F.softmax(scaled, dim=-1)
     values = torch.matmul(attention, v)
@@ -57,3 +57,4 @@ model = MultiheadAttention(input_dim, d_model, num_heads)
 out = model.forward(x)
 print(out)
 print(out.shape)
+
