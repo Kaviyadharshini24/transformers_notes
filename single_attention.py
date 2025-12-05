@@ -8,6 +8,7 @@ print("Q\n",q)
 print("K\n",k)
 print("V\n",v)
 
+//softmax function
 def softmax(x):
     return (np.exp(x).T/np.sum(np.exp(x),axis=-1)).T
 mask =np.tril(np.ones((L,L)))
